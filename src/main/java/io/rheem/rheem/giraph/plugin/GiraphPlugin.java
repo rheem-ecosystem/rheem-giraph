@@ -1,14 +1,14 @@
-package org.qcri.rheem.giraph.plugin;
+package io.rheem.rheem.giraph.plugin;
 
-import org.qcri.rheem.core.api.Configuration;
-import org.qcri.rheem.core.mapping.Mapping;
-import org.qcri.rheem.core.optimizer.channels.ChannelConversion;
-import org.qcri.rheem.core.platform.Platform;
-import org.qcri.rheem.core.plugin.Plugin;
-import org.qcri.rheem.core.util.fs.LocalFileSystem;
-import org.qcri.rheem.giraph.channels.ChannelConversions;
-import org.qcri.rheem.giraph.mappings.Mappings;
-import org.qcri.rheem.giraph.platform.GiraphPlatform;
+import io.rheem.rheem.core.api.Configuration;
+import io.rheem.rheem.core.mapping.Mapping;
+import io.rheem.rheem.core.optimizer.channels.ChannelConversion;
+import io.rheem.rheem.core.platform.Platform;
+import io.rheem.rheem.core.plugin.Plugin;
+import io.rheem.rheem.core.util.fs.LocalFileSystem;
+import io.rheem.rheem.giraph.channels.ChannelConversions;
+import io.rheem.rheem.giraph.mappings.Mappings;
+import io.rheem.rheem.giraph.platform.GiraphPlatform;
 
 import java.io.File;
 import java.util.Collection;

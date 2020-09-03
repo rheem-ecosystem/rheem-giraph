@@ -1,20 +1,20 @@
-package org.qcri.rheem.giraph.operators;
+package io.rheem.rheem.giraph.operators;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.qcri.rheem.basic.channels.FileChannel;
-import org.qcri.rheem.core.api.Configuration;
-import org.qcri.rheem.core.api.Job;
-import org.qcri.rheem.core.optimizer.DefaultOptimizationContext;
-import org.qcri.rheem.core.optimizer.OptimizationContext;
-import org.qcri.rheem.core.plan.rheemplan.ExecutionOperator;
-import org.qcri.rheem.core.platform.ChannelInstance;
-import org.qcri.rheem.core.platform.CrossPlatformExecutor;
-import org.qcri.rheem.core.profiling.FullInstrumentationStrategy;
-import org.qcri.rheem.giraph.Giraph;
-import org.qcri.rheem.giraph.execution.GiraphExecutor;
-import org.qcri.rheem.giraph.platform.GiraphPlatform;
-import org.qcri.rheem.java.channels.StreamChannel;
+import io.rheem.rheem.basic.channels.FileChannel;
+import io.rheem.rheem.core.api.Configuration;
+import io.rheem.rheem.core.api.Job;
+import io.rheem.rheem.core.optimizer.DefaultOptimizationContext;
+import io.rheem.rheem.core.optimizer.OptimizationContext;
+import io.rheem.rheem.core.plan.rheemplan.ExecutionOperator;
+import io.rheem.rheem.core.platform.ChannelInstance;
+import io.rheem.rheem.core.platform.CrossPlatformExecutor;
+import io.rheem.rheem.core.profiling.FullInstrumentationStrategy;
+import io.rheem.rheem.giraph.Giraph;
+import io.rheem.rheem.giraph.execution.GiraphExecutor;
+import io.rheem.rheem.giraph.platform.GiraphPlatform;
+import io.rheem.rheem.java.channels.StreamChannel;
 
 import java.io.IOException;
 

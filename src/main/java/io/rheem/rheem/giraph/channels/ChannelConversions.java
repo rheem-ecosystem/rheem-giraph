@@ -1,7 +1,7 @@
-package org.qcri.rheem.giraph.channels;
+package io.rheem.rheem.giraph.channels;
 
-import org.qcri.rheem.core.optimizer.channels.ChannelConversion;
-import org.qcri.rheem.giraph.platform.GiraphPlatform;
+import io.rheem.rheem.core.optimizer.channels.ChannelConversion;
+import io.rheem.rheem.giraph.platform.GiraphPlatform;
 import java.util.Collection;
 import java.util.Collections;
 

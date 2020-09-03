@@ -1,16 +1,16 @@
-package org.qcri.rheem.giraph.execution;
+package io.rheem.rheem.giraph.execution;
 
 import org.apache.giraph.conf.GiraphConfiguration;
-import org.qcri.rheem.core.api.Configuration;
-import org.qcri.rheem.core.api.Job;
-import org.qcri.rheem.core.optimizer.OptimizationContext;
-import org.qcri.rheem.core.plan.executionplan.ExecutionStage;
-import org.qcri.rheem.core.plan.executionplan.ExecutionTask;
-import org.qcri.rheem.core.platform.*;
-import org.qcri.rheem.core.platform.lineage.ExecutionLineageNode;
-import org.qcri.rheem.core.util.Tuple;
-import org.qcri.rheem.giraph.operators.GiraphExecutionOperator;
-import org.qcri.rheem.giraph.platform.GiraphPlatform;
+import io.rheem.rheem.core.api.Configuration;
+import io.rheem.rheem.core.api.Job;
+import io.rheem.rheem.core.optimizer.OptimizationContext;
+import io.rheem.rheem.core.plan.executionplan.ExecutionStage;
+import io.rheem.rheem.core.plan.executionplan.ExecutionTask;
+import io.rheem.rheem.core.platform.*;
+import io.rheem.rheem.core.platform.lineage.ExecutionLineageNode;
+import io.rheem.rheem.core.util.Tuple;
+import io.rheem.rheem.giraph.operators.GiraphExecutionOperator;
+import io.rheem.rheem.giraph.platform.GiraphPlatform;
 
 import java.util.*;
 

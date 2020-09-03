@@ -1,7 +1,7 @@
-package org.qcri.rheem.giraph;
+package io.rheem.rheem.giraph;
 
-import org.qcri.rheem.giraph.platform.GiraphPlatform;
-import org.qcri.rheem.giraph.plugin.GiraphPlugin;
+import io.rheem.rheem.giraph.platform.GiraphPlatform;
+import io.rheem.rheem.giraph.plugin.GiraphPlugin;
 
 /**
  * Register for relevant components of this module.

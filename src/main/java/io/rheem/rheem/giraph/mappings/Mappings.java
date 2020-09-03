@@ -1,6 +1,6 @@
-package org.qcri.rheem.giraph.mappings;
+package io.rheem.rheem.giraph.mappings;
 
-import org.qcri.rheem.core.mapping.Mapping;
+import io.rheem.rheem.core.mapping.Mapping;
 
 import java.util.Collection;
 import java.util.Collections;

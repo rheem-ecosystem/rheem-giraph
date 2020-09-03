@@ -1,6 +1,6 @@
-package org.qcri.rheem.giraph.Algorithm;
+package io.rheem.rheem.giraph.Algorithm;
 
-import org.qcri.rheem.core.api.exception.RheemException;
+import io.rheem.rheem.core.api.exception.RheemException;
 
 import java.util.LinkedList;
 import java.util.List;

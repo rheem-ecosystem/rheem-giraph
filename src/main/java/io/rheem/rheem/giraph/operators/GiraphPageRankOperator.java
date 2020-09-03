@@ -1,27 +1,27 @@
-package org.qcri.rheem.giraph.operators;
+package io.rheem.rheem.giraph.operators;
 
 import org.apache.giraph.conf.GiraphConfiguration;
 import org.apache.giraph.job.GiraphJob;
-import org.qcri.rheem.basic.channels.FileChannel;
-import org.qcri.rheem.basic.data.Tuple2;
-import org.qcri.rheem.basic.operators.PageRankOperator;
-import org.qcri.rheem.core.api.Configuration;
-import org.qcri.rheem.core.api.exception.RheemException;
-import org.qcri.rheem.core.optimizer.OptimizationContext;
-import org.qcri.rheem.core.optimizer.costs.LoadProfileEstimators;
-import org.qcri.rheem.core.plan.rheemplan.Operator;
-import org.qcri.rheem.core.platform.ChannelDescriptor;
-import org.qcri.rheem.core.platform.ChannelInstance;
-import org.qcri.rheem.core.platform.Platform;
-import org.qcri.rheem.core.platform.lineage.ExecutionLineageNode;
-import org.qcri.rheem.core.util.Tuple;
-import org.qcri.rheem.core.util.fs.FileSystem;
-import org.qcri.rheem.core.util.fs.FileSystems;
-import org.qcri.rheem.giraph.Algorithm.PageRankAlgorithm;
-import org.qcri.rheem.giraph.Algorithm.PageRankParameters;
-import org.qcri.rheem.giraph.execution.GiraphExecutor;
-import org.qcri.rheem.giraph.platform.GiraphPlatform;
-import org.qcri.rheem.java.channels.StreamChannel;
+import io.rheem.rheem.basic.channels.FileChannel;
+import io.rheem.rheem.basic.data.Tuple2;
+import io.rheem.rheem.basic.operators.PageRankOperator;
+import io.rheem.rheem.core.api.Configuration;
+import io.rheem.rheem.core.api.exception.RheemException;
+import io.rheem.rheem.core.optimizer.OptimizationContext;
+import io.rheem.rheem.core.optimizer.costs.LoadProfileEstimators;
+import io.rheem.rheem.core.plan.rheemplan.Operator;
+import io.rheem.rheem.core.platform.ChannelDescriptor;
+import io.rheem.rheem.core.platform.ChannelInstance;
+import io.rheem.rheem.core.platform.Platform;
+import io.rheem.rheem.core.platform.lineage.ExecutionLineageNode;
+import io.rheem.rheem.core.util.Tuple;
+import io.rheem.rheem.core.util.fs.FileSystem;
+import io.rheem.rheem.core.util.fs.FileSystems;
+import io.rheem.rheem.giraph.Algorithm.PageRankAlgorithm;
+import io.rheem.rheem.giraph.Algorithm.PageRankParameters;
+import io.rheem.rheem.giraph.execution.GiraphExecutor;
+import io.rheem.rheem.giraph.platform.GiraphPlatform;
+import io.rheem.rheem.java.channels.StreamChannel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -175,7 +175,7 @@ public class GiraphPageRankOperator extends PageRankOperator implements GiraphEx
 
 
     private Stream<Tuple2<Long, Float>> createStream(String path) {
-        return org.qcri.rheem.core.util.fs.FileUtils.streamLines(path).map(line -> {
+        return io.rheem.rheem.core.util.fs.FileUtils.streamLines(path).map(line -> {
             String[] part = line.split("\t");
             return new Tuple2<>(Long.parseLong(part[0]), Float.parseFloat(part[1]));
         });

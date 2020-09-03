@@ -1,11 +1,11 @@
-package org.qcri.rheem.giraph.mappings;
+package io.rheem.rheem.giraph.mappings;
 
-import org.qcri.rheem.basic.operators.PageRankOperator;
-import org.qcri.rheem.core.mapping.*;
-import org.qcri.rheem.core.plan.rheemplan.Operator;
-import org.qcri.rheem.core.plan.rheemplan.Subplan;
-import org.qcri.rheem.giraph.operators.GiraphPageRankOperator;
-import org.qcri.rheem.giraph.platform.GiraphPlatform;
+import io.rheem.rheem.basic.operators.PageRankOperator;
+import io.rheem.rheem.core.mapping.*;
+import io.rheem.rheem.core.plan.rheemplan.Operator;
+import io.rheem.rheem.core.plan.rheemplan.Subplan;
+import io.rheem.rheem.giraph.operators.GiraphPageRankOperator;
+import io.rheem.rheem.giraph.platform.GiraphPlatform;
 
 import java.util.Collection;
 import java.util.Collections;
