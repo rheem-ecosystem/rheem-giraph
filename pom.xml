@@ -2,40 +2,88 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rheem-giraph</artifactId>
-    <groupId>io.rheem</groupId>
-    <version>1.0.0-SNAPSHOT</version>
+    <parent>
+        <artifactId>rheem</artifactId>
+        <groupId>io.rheem</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
 
+    <groupId>io.rheem</groupId>
+    <artifactId>rheem-giraph</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <name>Rheem Platform Giraph</name>
+    <description>Rheem implementation of the operators to be working with the platform "Apache Giraph"</description>
+    <url>https://rheem.io</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+            <comments>
+                Copyright 2020 the original author or authors.
+
+                Licensed under the Apache License, Version 2.0 (the "License");
+                you may not use this file except in compliance with the License.
+                You may obtain a copy of the License at
+
+                http://www.apache.org/licenses/LICENSE-2.0
+
+                Unless required by applicable law or agreed to in writing, software
+                distributed under the License is distributed on an "AS IS" BASIS,
+                WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+                See the License for the specific language governing permissions and
+                limitations under the License.
+            </comments>
+        </license>
+    </licenses>
+
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <scala.compat.version>2.11</scala.compat.version>
-        <scala.version>2.11.8</scala.version>
-        <hadoop.version>2.6.0</hadoop.version>
+        <java-module-name>io.rheem.platform.giraph</java-module-name>
+        <rheem.core.version>1.0.0-SNAPSHOT</rheem.core.version>
+        <rheem.java.version>1.0.0-SNAPSHOT</rheem.java.version>
+        <giraph.version>1.2.0-hadoop2</giraph.version>
     </properties>
+
+    <scm>
+        <connection>scm:git:git://github.com/rheem-ecosystem/rheem-giraph</connection>
+        <developerConnection>scm:git:https://github.com/rheem-ecosystem/rheem-giraph</developerConnection>
+        <url>https://github.com/rheem-ecosystem/rheem-giraph</url>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/rheem-ecosystem/rheem-giraph/issues</url>
+    </issueManagement>
+
 
     <dependencies>
         <dependency>
             <groupId>io.rheem</groupId>
             <artifactId>rheem-core</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${rheem.core.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rheem</groupId>
             <artifactId>rheem-basic</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${rheem.core.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.rheem</groupId>
+            <artifactId>rheem-java</artifactId>
+            <version>${rheem.java.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-common</artifactId>
-            <version>${hadoop.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-hdfs</artifactId>
-            <version>${hadoop.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
@@ -47,16 +95,11 @@
             <artifactId>hadoop-client</artifactId>
             <version>${hadoop.version}</version>
         </dependency>
-        <dependency>
-            <groupId>io.rheem</groupId>
-            <artifactId>rheem-java</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
 
         <dependency>
             <groupId>org.apache.giraph</groupId>
             <artifactId>giraph-core</artifactId>
-            <version>1.2.0-hadoop2</version>
+            <version>${giraph.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.google.guava</groupId>
@@ -67,7 +110,7 @@
         <dependency>
             <groupId>org.apache.giraph</groupId>
             <artifactId>giraph-block-app</artifactId>
-            <version>1.2.0-hadoop2</version>
+            <version>${giraph.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.google.guava</groupId>
@@ -78,7 +121,7 @@
         <dependency>
             <groupId>org.apache.giraph</groupId>
             <artifactId>giraph-examples</artifactId>
-            <version>1.2.0-hadoop2</version>
+            <version>${giraph.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.google.guava</groupId>
@@ -86,9 +129,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-
-
     </dependencies>
 
 </project>
